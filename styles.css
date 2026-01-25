@@ -4,7 +4,7 @@
     --text-dark: #2b2b2b;
     --bg-color: #ffffff;
     --primary-font: 'Arial', sans-serif;
-    --secondary-font: 'Verdana', sans-serif;
+    --secondary-font: 'Playfair Display', serif;
     --third-font: 'Courier New', monospace;
 }
 
@@ -25,6 +25,7 @@ html {
 }
 
 body {
+    background-color: var(--bg-white);
     font-family: var(--primary-font);
     color: var(--text-dark);
     width: 100%;
@@ -34,13 +35,13 @@ body {
 }
 
 header {
-    background-color: var(--bg-lightgray);
+    background-color: var(--bg-white);
     width: 100%;
-    height: 20vh;
+    height: 15vh;
     margin: 0 auto;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -60,7 +61,7 @@ nav ul li a {
     text-decoration: none;
     color: var(--text-dark);
     font-family: var(--primary-font);
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
@@ -70,7 +71,7 @@ nav ul li a:hover {
 
 h1{
     font-family: var(--secondary-font);
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: var(--text-dark);
     margin: 1rem 0;
 
@@ -119,4 +120,57 @@ main {
     padding: 2rem;
     background-color: var(--bg-color);
     min-height: 75vh;
+    margin: 0 auto;
+}
+
+main h2 {
+    font-family: var(--secondary-font);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-item {
+    background-color: var(--bg-white);
+    border: 1px solid var(--bg-lightgray);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--bg-lightgray);
+    color: var(--text-dark);
+    text-align: center;
+    padding: 1rem 0;
+    font-family: var(--primary-font);
+    font-size: 1rem;
 }
